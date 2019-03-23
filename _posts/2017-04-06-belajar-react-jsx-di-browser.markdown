@@ -3,7 +3,6 @@ author: egig
 comments: true
 date: 2017-04-06 18:37:36+00:00
 layout: post
-link: https://egig.org/tutorial/belajar-react-jsx-di-browser
 slug: belajar-react-jsx-di-browser
 title: 'Belajar React: JSX di Browser'
 wordpress_id: 32

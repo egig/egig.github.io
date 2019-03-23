@@ -3,7 +3,6 @@ author: egig
 comments: true
 date: 2018-08-20 02:47:19+00:00
 layout: post
-link: https://egig.org/thought/guard-clause-in-async
 slug: guard-clause-in-async
 title: Guard Clause in Async
 wordpress_id: 117

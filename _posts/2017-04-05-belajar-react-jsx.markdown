@@ -3,7 +3,6 @@ author: egig
 comments: true
 date: 2017-04-05 18:33:01+00:00
 layout: post
-link: https://egig.org/tutorial/belajar-react-jsx
 slug: belajar-react-jsx
 title: 'Belajar React: JSX'
 wordpress_id: 29

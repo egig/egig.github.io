@@ -3,7 +3,6 @@ author: egig
 comments: true
 date: 2017-04-03 18:25:55+00:00
 layout: post
-link: https://egig.org/tutorial/belajar-react-hello-world
 slug: belajar-react-hello-world
 title: 'Belajar React: Hello World'
 wordpress_id: 24

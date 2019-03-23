@@ -3,7 +3,6 @@ author: egig
 comments: true
 date: 2016-01-08 15:06:07+00:00
 layout: post
-link: https://egig.org/tips/symfony-log-to-database
 slug: symfony-log-to-database
 title: Symfony, Log to Database
 wordpress_id: 47

@@ -3,7 +3,6 @@ author: egig
 comments: true
 date: 2016-05-24 01:01:36+00:00
 layout: post
-link: https://egig.org/tutorial/belajar-symfony-console-component
 slug: belajar-symfony-console-component
 title: Belajar Symfony Console Component
 wordpress_id: 54

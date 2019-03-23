@@ -3,7 +3,6 @@ author: egig
 comments: true
 date: 2018-05-11 14:16:42+00:00
 layout: post
-link: https://egig.org/best-practices/easier-to-ask-for-forgiveness-than-permission
 slug: easier-to-ask-for-forgiveness-than-permission
 title: Easier to ask for forgiveness than permission
 wordpress_id: 113

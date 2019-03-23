@@ -3,7 +3,6 @@ author: egig
 comments: true
 date: 2015-06-18 01:27:59+00:00
 layout: post
-link: https://egig.org/review/hello-phabricator
 slug: hello-phabricator
 title: Hello Phabricator
 wordpress_id: 59

@@ -3,7 +3,6 @@ author: egig
 comments: true
 date: 2017-12-24 18:50:00+00:00
 layout: post
-link: https://egig.org/review/learning-solr
 slug: learning-solr
 title: Learning Solr
 wordpress_id: 103

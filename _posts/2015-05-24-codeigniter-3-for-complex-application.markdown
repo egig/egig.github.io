@@ -3,7 +3,6 @@ author: egig
 comments: true
 date: 2015-05-24 00:20:25+00:00
 layout: post
-link: https://egig.org/thought/codeigniter-3-for-complex-application
 slug: codeigniter-3-for-complex-application
 title: Codeigniter 3 for Complex Application
 wordpress_id: 102

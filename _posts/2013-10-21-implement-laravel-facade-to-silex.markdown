@@ -3,7 +3,6 @@ author: egig
 comments: true
 date: 2013-10-21 10:00:33+00:00
 layout: post
-link: https://egig.org/tips/implement-laravel-facade-to-silex
 slug: implement-laravel-facade-to-silex
 title: Implement Laravel Facade to Silex
 wordpress_id: 110

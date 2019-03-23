@@ -3,7 +3,6 @@ author: egig
 comments: true
 date: 2013-10-15 10:00:24+00:00
 layout: post
-link: https://egig.org/review/understanding-laravel-4
 slug: understanding-laravel-4
 title: Understanding Laravel 4
 wordpress_id: 109

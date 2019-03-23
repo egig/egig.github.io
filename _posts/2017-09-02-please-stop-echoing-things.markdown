@@ -3,7 +3,6 @@ author: egig
 comments: true
 date: 2017-09-02 11:53:17+00:00
 layout: post
-link: https://egig.org/best-practices/please-stop-echoing-things
 slug: please-stop-echoing-things
 title: Please Stop Echoing Things
 wordpress_id: 65

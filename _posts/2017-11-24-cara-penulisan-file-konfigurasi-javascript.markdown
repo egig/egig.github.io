@@ -3,7 +3,6 @@ author: egig
 comments: true
 date: 2017-11-24 07:06:46+00:00
 layout: post
-link: https://egig.org/best-practices/cara-penulisan-file-konfigurasi-javascript
 slug: cara-penulisan-file-konfigurasi-javascript
 title: Cara Penulisan File Konfigurasi Javascript
 wordpress_id: 96

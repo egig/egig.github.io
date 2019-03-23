@@ -3,7 +3,6 @@ author: egig
 comments: true
 date: 2017-04-24 18:43:12+00:00
 layout: post
-link: https://egig.org/tutorial/belajar-react-props-state
 slug: belajar-react-props-state
 title: 'Belajar React: Props & State'
 wordpress_id: 34

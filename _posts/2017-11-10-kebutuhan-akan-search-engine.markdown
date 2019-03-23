@@ -3,7 +3,6 @@ author: egig
 comments: true
 date: 2017-11-10 10:51:42+00:00
 layout: post
-link: https://egig.org/thought/kebutuhan-akan-search-engine
 slug: kebutuhan-akan-search-engine
 title: Kebutuhan akan Search Engine
 wordpress_id: 95

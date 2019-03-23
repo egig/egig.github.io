@@ -3,7 +3,6 @@ author: egig
 comments: true
 date: 2017-09-03 17:43:37+00:00
 layout: post
-link: https://egig.org/tips/handle-error-di-promise-catch
 slug: handle-error-di-promise-catch
 title: Handle Error di Promise.catch()
 wordpress_id: 71
