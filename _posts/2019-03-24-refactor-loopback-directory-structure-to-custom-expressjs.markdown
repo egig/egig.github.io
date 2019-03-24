@@ -1,6 +1,6 @@
 ---
 author: egig
-date: 2018-03-24 10:10:00+00:00
+date: 2019-03-24 10:10:00+00:00
 layout: post
 slug: refactor-loopback-directory-structure-to-custom-expressjs
 title: Refactor Loopback 2.0 Directory Structure to Custom Expressjs
