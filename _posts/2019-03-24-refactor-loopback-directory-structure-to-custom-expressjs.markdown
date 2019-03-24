@@ -52,17 +52,17 @@ This is the structure looks like now:
 This is what I do.
 1. I move all Loopback directory to `legacy`, so no one might touch this ever again.
 2. Creat new structure in `src`, as you see, its pretty much like MVC, typical.
-3. Import `legagy/server.js` in  `src/server.js`, and use it as base of the application.
+3. Import `legacy/server.js` in  `src/server.js`, and use it as base of the application.
 4. Import `config.json` to `legecy/server/config.js` and export it. So we only take the reference. Same with other config, respectively.
 4. The most important things, move boot function to `src/server.js` and change the legacy root directory, `legacy/server` in this case.
 
 
-	boot(app, <path/to/legacy/server/dir>, function(err) {
-	  if (err) throw err;
-	  // start the server if `$ node server.js`
-	  if (require.main === module)
-	    app.start();
-	});
+		boot(app, <path/to/legacy/server/dir>, function(err) {
+		  if (err) throw err;
+		  // start the server if `$ node server.js`
+		  if (require.main === module)
+		    app.start();
+		});
 
-4. that's it
+5. that's it
 
