@@ -3,8 +3,8 @@ author: egig
 comments: true
 date: 2017-12-24 18:50:00+00:00
 layout: post
-slug: learning-solr
-title: Learning Solr
+slug: solr-episode-1
+title: Solr, episode 1
 wordpress_id: 103
 categories:
 - Review
@@ -17,7 +17,9 @@ I learnt a lot of interesting things. This has been a few months, since I starte
 
 Solr is all about feeding it with data and how you get the data back. When we feed Solr with data, thats called indexing. When we need to get the data back, thats called Query. So two activity that always we do when working with solr is Indexing and Query-ing. If you ever using Database Sql, its like you just do INSERT INTO and SELECT something FROM. Thats simplest explanation.
 
-![](http://egig.org/wp-content/uploads/2017/12/solr-simple.png)
+
+[<img src="{{ site.baseurl }}/images/solr-simple.png" alt="" style="width: 100%;"/>]({{ site.baseurl }}/)
+
 
 Here is some of term I have to familiar with when working with Solr: <!-- more --> Documents, Fields, Field Type, Core, Analyzer, Tokenizer, Filter, Query Parser, etc. Indexing and Query-ing involves some collection of documents, kind of JSON object, in Solr app its called Core. How documents saved and queried, it depends on the field type of fields of the document. Each field type have certain Analyzer. There are two kind of analyzer: Index and Query. Index analyzer, is used when we do the indexing. Query analyzer is used when we do the query.
 
