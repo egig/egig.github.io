@@ -11,7 +11,7 @@ tags:
 - Loopback
 ---
 
-The challange is to keep eveerythings fine, not break single thing while we do change things to be like what we need. I know there is some best practice already out there. This is only documentary notes. Who knows I need this again in the future.
+The challange is to keep eveerythings fine, not break single thing while we do change things to be like what we need. I know there is some best practice already [out there](https://github.com/i0natan/nodebestpractices). This is only documentary notes. Who knows I need this again in the future.
 
 We was using loopback 2.0 to initiate some projects, my previous developer choose it. I don't know why. But then I feel loopback does not suit our current state, So, I think I want to change  to just use expressjs. Fortunately loopback 2.0 is based on Expressjs so its possible to refactor the structure.<!-- more -->
 
