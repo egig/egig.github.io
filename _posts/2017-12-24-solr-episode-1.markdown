@@ -4,7 +4,7 @@ comments: true
 date: 2017-12-24 18:50:00+00:00
 layout: post
 slug: solr-episode-1
-title: Solr, episode 1
+title: Solr, Episode 1
 wordpress_id: 103
 categories:
 - Review
