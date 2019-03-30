@@ -10,7 +10,7 @@ tags:
 - MongoDB
 ---
 
-Le's say, I have this kindof list of Mongodb documents, named `hardwares`;
+Let's say, I have this kind of list of Mongodb documents, named `hardwares`;
 
 	[
 		{
