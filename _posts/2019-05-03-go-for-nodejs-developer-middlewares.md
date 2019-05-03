@@ -69,8 +69,7 @@ And this is how we use the `DB` in route.
 
 ```
 func handler(w http.ResponseWriter, r *http.Request) {
-	vars := mux.Vars(r)
-	petId, _ := strconv.Atoi(vars["id"])
+
 	db := r.Context().Value("db").(*sql.DB)
 	// use db for whatever
 }
