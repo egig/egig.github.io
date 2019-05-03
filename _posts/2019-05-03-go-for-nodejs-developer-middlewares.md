@@ -3,7 +3,7 @@ author: egig
 date: 2019-05-03 13:00:00+00:00
 layout: post
 slug: go-for-nodejs-developer-middlewares
-title: Go for Nodejs Developer\: Middlewares
+title: "Go for Nodejs Developer: Middlewares"
 tags:
 - Go
 - Middlewares
