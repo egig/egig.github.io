@@ -29,9 +29,10 @@ Http server in Nodejs (Expressjs):
 app.get('/', function (req, res) {
 	//..
 })
+app.listen(port)
 ```
 
-See, that both maps "path" to function that expect Response and Request as param. At this point I was pretty sure that I can code in Go. haha.
+See, that both maps "path" to function that expect Response and Request as param and then call "listen". At this point I was pretty sure that I can code in Go. haha.
 
 
 I extensively use Expressjs as framework to build web service, and do anything middlewares to decouple things. So once I try to build a project in Go, then I still bring that behaviour in mind. Decouple things problems also comes out when I try to code in Go, so I think I can do same thing as what I did in nodejs: Middlewares.
@@ -62,7 +63,7 @@ func CreateDBMiddleware(driver, dsn string) mux.MiddlewareFunc {
 This is how we use it in router. Note that here we use `config.DBdriver` and `config.DBDSN` which is we can get it from anywhare and we don't have to create it each time we create route.
 ```
 router := *mux.NewRouter()
-router.Use(middlewares.CreateDBMiddleware(config.DBDriver, config.DBDSN))
+router.Use(CreateDBMiddleware(config.DBDriver, config.DBDSN))
 ```
 
 And this is how we use the `DB` in route.
