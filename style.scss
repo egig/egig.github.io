@@ -19,7 +19,7 @@ html {
 
 body {
 	background: $white;
-  font: 18px/1.4 $helvetica;
+  font: 18px/1.4 $georgia;
   color: $darkGray;
 }
 
@@ -66,6 +66,7 @@ h4 {
 
 p {
   margin: 15px 0;
+  text-align: justify;
 }
 
 a {
@@ -116,6 +117,8 @@ img {
 }
 
 .date {
+  margin-top: 1em;
+  font-size: 89%;
   font-style: italic;
   color: $gray;
 }

@@ -15,7 +15,7 @@ I feel lucky I learn Expressjs (nodejs) as before learning Go, because  I think 
 
 Http server in Go:
 
-```
+```golang
 http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 	//..
 })
@@ -25,7 +25,7 @@ log.Fatal(http.ListenAndServe(":8080", nil))
 
 Http server in Nodejs (Expressjs):
 
-```
+```javascript
 app.get('/', function (req, res) {
 	//..
 })
@@ -41,7 +41,7 @@ I found this Go library called "mux", "A powerful URL router and dispatcher for 
 
 And here it is.
 
-```
+```golang
 func CreateDBMiddleware(driver, dsn string) mux.MiddlewareFunc {
 	return func (next http.Handler) http.Handler {
 		return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {

@@ -27,40 +27,36 @@ this lines:
 
 
     
-    
-    Route::get('/', function()
-    {
-       return View::make('hello');
-    });
-    
-
+```php 
+Route::get('/', function()
+{
+   return View::make('hello');
+});
+```
 
 
 can be written as
 
 
     
+```php    
+$app['router']->get('/', function() use ($app)
+{
+   return $app['view']->make('hello');
+});
+```
     
-    $app['router']->get('/', function() use ($app)
-    {
-       return $app['view']->make('hello');
-    });
-    
-
-
-
-
 
 ## Facade
-
 
 
 When you call a class in Laravel, e.g `Route::get()` or `DB::Schema()`, you actually call a facade extension class. The facade class then make use of magic method `__callStatic()` to run desired function on 'real' class. 'Real' class is a class that registered to be bound to Laravel Application. Each class registered via it's Service Provider listed at the app config file (`app/config/app.php`) as array : 'providers'. To get to know what is the 'Real' Class that you are calling, you can use
 
 
     
-    
-    Facade::getFacadeRoot();
+```php    
+Facade::getFacadeRoot();
+```
     
 
 
@@ -69,15 +65,15 @@ e.g,
 
 
     
-    
-    $realClass  = View::getFacadeRoot();
-    return get_class($realClass); // will print Illuminate\View\Environment
-    
-    //or
-    
-    $realClass  = Route::getFacadeRoot();
-    return get_class($realClass); // will print Illuminate\Routing\Router
-    
+```php
+$realClass  = View::getFacadeRoot();
+return get_class($realClass); // will print Illuminate\View\Environment
+
+//or
+
+$realClass  = Route::getFacadeRoot();
+return get_class($realClass); // will print Illuminate\Routing\Router
+```
 
 
 
@@ -97,16 +93,17 @@ and also `vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider`
 
 
     
-    
-        $this->app['view'] = $this->app->share(function($app)
-        {
-            $resolver = $app['view.engine.resolver'];
-    
-            $finder = $app['view.finder'];
-    
-            $env = new Environment($resolver, $finder, $app['events']); //<<-- has namespace Illuminate/View
-    
-            return $env
+```php
+$this->app['view'] = $this->app->share(function($app)
+{
+    $resolver = $app['view.engine.resolver'];
+
+    $finder = $app['view.finder'];
+
+    $env = new Environment($resolver, $finder, $app['events']); //<<-- has namespace Illuminate/View
+
+    return $env
+```
     
 
 
@@ -123,9 +120,9 @@ Artisan use Symfony Console component that you have to do `$console->add(new You
 
 
     
-    
-    public function commands($commands)
-    
+```php    
+public function commands($commands)
+```
 
 
 
@@ -133,16 +130,17 @@ In fact, each artisan command is registered via above `commands` method when rel
 
 
     
-    
-        protected function registerCommands()
-        {
-            $commands = array('Migrate', 'Rollback', 'Reset', 'Refresh', 'Install', 'Make');
-    
-            $this->commands(
-            'command.migrate', 'command.migrate.make',
-            'command.migrate.install', 'command.migrate.rollback',
-            'command.migrate.reset', 'command.migrate.refresh'
-        );
+```php
+protected function registerCommands()
+{
+    $commands = array('Migrate', 'Rollback', 'Reset', 'Refresh', 'Install', 'Make');
+
+    $this->commands(
+    'command.migrate', 'command.migrate.make',
+    'command.migrate.install', 'command.migrate.rollback',
+    'command.migrate.reset', 'command.migrate.refresh'
+);
+```
     
 
 
