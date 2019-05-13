@@ -19,17 +19,16 @@ You probably have ever seen or even written code like below:
 
 
     
-    
-    <table>
-    ';
-        echo '<td>'.$row->name.'<td>';
-        echo '<td>'.$row->email.'</td>';
-        echo '</tr>';
-    }
-    ?>
-    </table>
-    
-
+```php  
+<table>
+<?php
+    echo '<td>'.$row->name.'<td>';
+    echo '<td>'.$row->email.'</td>';
+    echo '</tr>';
+}
+?>
+</table>
+```
 
 
    1. PHP short echo tag (<?=) is now available forever (PHP version 5.4+)
@@ -39,15 +38,16 @@ With those powerful feature, we can rewrite code above little bit more handsome:
 
 
     
-    
-    <table>
-      
-        <tr>
-             <td>name; ?></td>
-             <td>email; ?></td>
-        </tr>
-      
-    </table>
+```php
+<table>
+  
+    <tr>
+         <td>name; ?></td>
+         <td>email; ?></td>
+    </tr>
+  
+</table>
+```
     
 
 

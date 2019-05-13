@@ -17,16 +17,18 @@ We was using loopback 2.0 to initiate some projects, my previous developer choos
 
 This is loopback 2.0 directory structure, pretty much.
 
-	- client
-	- common
-	- server
-		- boot
-		- explorer
-		- config
-		- model-config.js
-		- datasources.js
-		- server.js
-	- package.json
+```shell
+- client
+- common
+- server
+	- boot
+	- explorer
+	- config
+	- model-config.js
+	- datasources.js
+	- server.js
+- package.json
+```
 
 
 I don't have enough time to learn more about Loopback 2.0 and this project already miss-designed by previous developer, IMO. Even, no one in my team really understand the concept (this is not best thing in team, lessons). So I need to change it to more known simpler structure: MVC. I don't think this is best solution as well, but at least I can explain to everyone what we are building.
@@ -34,19 +36,21 @@ I don't have enough time to learn more about Loopback 2.0 and this project alrea
 
 This is the structure looks like now:
 
-	- legacy
-		- client
-		- common
-		- server
-	- src
-		- routes
-		- repository
-		- services
-		- common
-		- server.js
-	- tests
-	- package.json
-	- config.json
+```
+- legacy
+	- client
+	- common
+	- server
+- src
+	- routes
+	- repository
+	- services
+	- common
+	- server.js
+- tests
+- package.json
+- config.json
+```
 
 
 This is what I do.
@@ -57,12 +61,14 @@ This is what I do.
 4. The most important things, move boot function to `src/server.js` and change the legacy root directory, `legacy/server` in this case.
 
 
-		boot(app, <path/to/legacy/server/dir>, function(err) {
-		  if (err) throw err;
-		  // start the server if `$ node server.js`
-		  if (require.main === module)
-		    app.start();
-		});
+```js
+boot(app, <path/to/legacy/server/dir>, function(err) {
+  if (err) throw err;
+  // start the server if `$ node server.js`
+  if (require.main === module)
+    app.start();
+});
+```
 
 5. that's it
 

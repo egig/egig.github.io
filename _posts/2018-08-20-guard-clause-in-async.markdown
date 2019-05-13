@@ -17,36 +17,35 @@ I really like Guard Clause, it makes me easier to read coding flow. Ya, you migh
 But, when it comes to javascript, its always be exhausted. Javascript is exhausting. I dive in to async world in javascript two years ago and still don't know to use Guard Clause in it. Ya, this code won't work whatsoever:
 
 
-    
-    
-    function getItem(type) {
-    
-        if(type == 1) {
-            return request.get("/onetype", (err, results) => {
-              if(results.length) {
-                return null;
-              }
-    
-              return results[0];
-            })
-        }
-    
-        if(type == 2) {
-             return request.get("/another_type", (err, results) => {
-              if(results.length) {
-                return null;
-              }
-    
-              return results[0];
-            })
-        }
-       
-    
-        return null;
+```js
+function getItem(type) {
+
+    if(type == 1) {
+        return request.get("/onetype", (err, results) => {
+          if(results.length) {
+            return null;
+          }
+
+          return results[0];
+        })
     }
-    
-    let item =  getItem(); // Won't return the desired item
-    
+
+    if(type == 2) {
+         return request.get("/another_type", (err, results) => {
+          if(results.length) {
+            return null;
+          }
+
+          return results[0];
+        })
+    }
+   
+
+    return null;
+}
+
+let item =  getItem(); // Won't return the desired item
+```
 
 
 
@@ -56,63 +55,61 @@ Lets take example for Martin Fowler website above, but in js.
 
 
     
+```js
+function getPayAmount() {
+  if (_isDead) return deadAmount();
+  if (_isSeparated) return separatedAmount();
+  if (_isRetired) return retiredAmount();
+  return normalPayAmount();
+};
+```
     
-    function getPayAmount() {
-      if (_isDead) return deadAmount();
-      if (_isSeparated) return separatedAmount();
-      if (_isRetired) return retiredAmount();
-      return normalPayAmount();
-    }; 
-    
-
-
 
 If functions `deadAmount`, `separatedAmount`, `retiredAmount` and `normalPayAmount` are Promises, I used to do it like this.
 
 
     
-    
-    function getPayAmount(callback) {
-      if (_isDead) return deadAmount().then(callback);
-      if (_isSeparated) return separatedAmount().then(callback);
-      if (_isRetired) return retiredAmount().then(callback);
-      return normalPayAmount().then(callback);
-    }; 
-    
-
+```js
+function getPayAmount(callback) {
+  if (_isDead) return deadAmount().then(callback);
+  if (_isSeparated) return separatedAmount().then(callback);
+  if (_isRetired) return retiredAmount().then(callback);
+  return normalPayAmount().then(callback);
+};
+```  
 
 
 Ya but actually we can do it better like this.
 
 
-    
-    
-    function getPayAmount() {
-      if (_isDead) return deadAmount();
-      if (_isSeparated) return separatedAmount();
-      if (_isRetired) return retiredAmount();
-      return normalPayAmount();
-    }; 
-    
-    getPayAmount().then((amount) => {
-       // do whatever with amount
-    });
-    
+```js 
+function getPayAmount() {
+  if (_isDead) return deadAmount();
+  if (_isSeparated) return separatedAmount();
+  if (_isRetired) return retiredAmount();
+  return normalPayAmount();
+}; 
 
+getPayAmount().then((amount) => {
+   // do whatever with amount
+});
+```
+    
 
 
 Or better better, we can use IIFE if `getPayAmount` doesn't necessary to be reusable function.
 
 
     
-    
-    (function getPayAmount() {
-      if (_isDead) return deadAmount();
-      if (_isSeparated) return separatedAmount();
-      if (_isRetired) return retiredAmount();
-      return normalPayAmount();
-    };)()
-    .then((amount) => {
-       // do whatever with amount
-    })
+```js
+(function getPayAmount() {
+  if (_isDead) return deadAmount();
+  if (_isSeparated) return separatedAmount();
+  if (_isRetired) return retiredAmount();
+  return normalPayAmount();
+};)()
+.then((amount) => {
+   // do whatever with amount
+})
+```
     

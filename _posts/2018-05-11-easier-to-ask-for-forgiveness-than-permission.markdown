@@ -38,11 +38,12 @@ Misalkan, kita harus check apakah key `key1` ada pada dictionary `dict`, kita ha
 
 
     
-    
-    if 'key1' in dict:
-      print("key exists")
-    else:
-      print("key not exists")
+```py   
+if 'key1' in dict:
+  print("key exists")
+else:
+  print("key not exists")
+```
     
 
 
@@ -51,13 +52,13 @@ sedangkan jika menggunakan cara "jalanin dulu, nanti minta maaf", kodingnya bisa
 
 
     
-    
-    try:
-      key1 = dict['key1]
-      print("key exists")
-    except KeyError:
-      print("key not exists")
-    
+```py  
+try:
+  key1 = dict['key1]
+  print("key exists")
+except KeyError:
+  print("key not exists")
+```
 
 
 
@@ -65,20 +66,20 @@ Disarankan menggunakan prinsip EAFP apalagi dalam kasus-kasus tertentu, misalnya
 
 
     
-    
-    dict['foo']['bar']['baz'];
-    
-
+```py    
+dict['foo']['bar']['baz'];
+```
 
 
 tentunya repot and tedious banget kalo ngecek satu-satu seperti ini:
 
 
     
-    
-    if 'foo' in dict:
-      if 'bar' in dict['foo]:
-        if 'baz' in dict['foo']['bar]:
+```py  
+if 'foo' in dict:
+  if 'bar' in dict['foo]:
+    if 'baz' in dict['foo']['bar]:
+```
     
 
 
@@ -87,12 +88,13 @@ Lebih baik jika ditulis seperti ini:
 
 
     
-    
-    try:
-      key1 = dict['foo']['bar']['baz']
-       //..
-    except KeyError:
-       //..
+```py   
+try:
+  key1 = dict['foo']['bar']['baz']
+   #..
+except KeyError:
+   #..
+```
     
 
 

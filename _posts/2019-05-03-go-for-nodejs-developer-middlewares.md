@@ -61,14 +61,15 @@ func CreateDBMiddleware(driver, dsn string) mux.MiddlewareFunc {
 
 
 This is how we use it in router. Note that here we use `config.DBdriver` and `config.DBDSN` which is we can get it from anywhare and we don't have to create it each time we create route.
-```
+
+```golang
 router := *mux.NewRouter()
 router.Use(CreateDBMiddleware(config.DBDriver, config.DBDSN))
 ```
 
 And this is how we use the `DB` in route.
 
-```
+```golang
 func handler(w http.ResponseWriter, r *http.Request) {
 
 	db := r.Context().Value("db").(*sql.DB)
