@@ -254,8 +254,18 @@ img {
 }
 
 footer {
+  font-size: 0.8em;
   padding: 20px 0;
   text-align: center;
+}
+
+.footer-nav {
+  font-family: $helveticaNeue;
+  color: #777777;
+  a {
+    color: #666666;
+    font-weight: bolder;
+  }
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
