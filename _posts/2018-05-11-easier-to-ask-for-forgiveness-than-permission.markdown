@@ -14,7 +14,7 @@ tags:
 
 Baru tau kalo ada yang namanya prinsip EAFP dalam pemrograman. EAFP Principle as you might can google it, it is a principle or pattern to write code in python. Pretty sure we can use it in other programming language as well.<!-- more -->
 
-[https://stackoverflow.com/questions/11360858/what-is-the-eafp-principle-in-python?utm_medium=organic&utm;_source=google_rich_qa&utm;_campaign=google_rich_qa](https://stackoverflow.com/questions/11360858/what-is-the-eafp-principle-in-python?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa)
+[EAFP](https://stackoverflow.com/questions/11360858/what-is-the-eafp-principle-in-python?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa)
 
 Mungkin bahasa sederhananya bisa dikatakan begini
 
@@ -54,7 +54,7 @@ sedangkan jika menggunakan cara "jalanin dulu, nanti minta maaf", kodingnya bisa
     
 ```py  
 try:
-  key1 = dict['key1]
+  key1 = dict['key1']
   print("key exists")
 except KeyError:
   print("key not exists")
@@ -77,8 +77,8 @@ tentunya repot and tedious banget kalo ngecek satu-satu seperti ini:
     
 ```py  
 if 'foo' in dict:
-  if 'bar' in dict['foo]:
-    if 'baz' in dict['foo']['bar]:
+  if 'bar' in dict['foo']:
+    if 'baz' in dict['foo']['bar']:
 ```
     
 
