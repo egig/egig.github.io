@@ -9,8 +9,8 @@ wordpress_id: 95
 categories:
 - Thought
 tags:
-- Search Engine
-- Solr
+- search-engine
+- solr
 ---
 
 Pada Sistem Relational Database (RDBMS), pengguna dapat melakukan pencarian data dengan menggunakan SQL. Tetapi terdapat keterbatasan. Pencarian hanya terbatas pada text yang terdapat pada kolom tabel saja juga ada keterbatasan lainnya juga.

@@ -9,8 +9,8 @@ wordpress_id: 59
 categories:
 - Review
 tags:
-- Development
-- PHP
+- development
+- php
 ---
 
 So, due to the codes that always being sucks and hard to manage, I proposed my current company to do code reviews. As the tool, we choose Phabricator. At first I guess I'll choose Gitlab, or even Atlasian, but Phabricator seems worth to be tried.

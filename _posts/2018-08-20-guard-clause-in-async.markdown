@@ -9,7 +9,7 @@ wordpress_id: 117
 categories:
 - Thought
 tags:
-- Javascript
+- javascript
 ---
 
 I really like Guard Clause, it makes me easier to read coding flow. Ya, you might want to google it "Guard Clause", is a pattern to write code. You'll end up on this link: [Replace Nested Conditional with Guard Clauses - Refactoring](https://refactoring.com/catalog/replaceNestedConditionalWithGuardClauses.html). If you don't use it or even don't know it yet, I suggest you to learn and use it and share to your team. You all will love it.<!-- more -->

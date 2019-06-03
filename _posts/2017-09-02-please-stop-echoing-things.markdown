@@ -9,7 +9,7 @@ wordpress_id: 65
 categories:
 - Best Practices
 tags:
-- PHP
+- php
 ---
 
 For my little brother who likes to embedding PHP to html but not sure how to do it nicely.

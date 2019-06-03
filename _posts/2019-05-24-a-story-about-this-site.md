@@ -5,9 +5,9 @@ layout: post
 slug: jekyll-again
 title: Jekyll Again
 tags:
-- Jekyll
-- Hugo
-- Static Site Generator
+- jekyll
+- hugo
+- static-site-generator
 ---
 
 I actually already aware about static site generator far years ago, and already used once, Jekyll. And then, I need to learn another then I try some other static site generator. One can consider this as wasting time, but, I don't know. This might give me some experience by changing blog engine all the time.

@@ -7,8 +7,8 @@ title: Refactor Loopback 2.0 Directory Structure to Custom Expressjs
 categories:
 - Best Practices
 tags:
-- Nodejs
-- Loopback
+- nodejs
+- loopback
 ---
 
 The challange is to keep eveerythings fine, not break single thing while we do change things to be like what we need. I know there is some best practice already [out there](https://github.com/i0natan/nodebestpractices). This is only documentary notes. Who knows I need this again in the future.

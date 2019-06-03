@@ -9,8 +9,8 @@ wordpress_id: 110
 categories:
 - Tips
 tags:
-- Laravel
-- PHP
+- laravel
+- php
 ---
 
 Last post, while I understanding how does laravel work behind, I said that I guess I can implement laravel facade to silex since they have similiar inner structure. And I just did it. This is how.<!-- more -->

@@ -9,9 +9,9 @@ wordpress_id: 71
 categories:
 - Tips
 tags:
-- Javascript
-- Nodejs
-- Promise
+- javascript
+- nodejs
+- promise
 ---
 
 Baru sempat baca lebih lanjut tentang error handling di Promise Javascript. Agak ketinggalan sih, karena ini masalah sudah ada dari 2 tahun-an lalu, tapi gak apa, baru fokus ke Javascript setahun terakhir, dan anyway agak susah juga cari artikel yang bahas ini pake Bahasa Indonesia jadi saya tulis aja disini.

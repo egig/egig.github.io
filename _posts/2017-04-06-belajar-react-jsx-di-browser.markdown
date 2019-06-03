@@ -9,8 +9,8 @@ wordpress_id: 32
 categories:
 - Tutorial
 tags:
-- Javascript
-- React
+- javascript
+- react
 ---
 
 JSX tidak bisa dijalankan di browser begitu saja, karena browser, bahkan yang terbaru sekalipun, hanya mendukung javascript murni saja. Agar bisa menggunakan sintak JSX di browser, kita harus menggunakan librari lain yang bernana Babel.

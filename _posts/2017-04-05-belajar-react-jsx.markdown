@@ -9,8 +9,8 @@ wordpress_id: 29
 categories:
 - Tutorial
 tags:
-- Javascript
-- React
+- javascript
+- react
 ---
 
 Pada pembahasan sebelumnya kita membuat React component dengan cara sebagai berikut.

@@ -9,8 +9,8 @@ wordpress_id: 24
 categories:
 - Tutorial
 tags:
-- Javascript
-- React
+- javascript
+- react
 ---
 
 Seperti biasa, sesuai tradisi belajar pemrograman, kita akan belajar menampilkan pesan "Hello World " di browser menggunakan React.

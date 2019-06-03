@@ -7,7 +7,7 @@ title: MongoDB Sort By Nested Array of Object Item
 categories:
 - Tips
 tags:
-- MongoDB
+- mongodb
 ---
 
 Let's say, I have this kind of list of Mongodb documents, named `hardwares`;

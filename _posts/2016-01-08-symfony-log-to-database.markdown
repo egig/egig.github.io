@@ -9,8 +9,8 @@ wordpress_id: 47
 categories:
 - Tips
 tags:
-- PHP
-- Symfony
+- php
+- symfony
 ---
 
 Symfony sudah dilengkapi dengan component terkait dengan log: Monolog. Namun, symfony secara default menyimpan log hanya pada filesystem dan tidak menyediakan fitur penyimpanan log pada database. Karena memang tidak semua orang ingin menyimpan log aplikasi pada database.

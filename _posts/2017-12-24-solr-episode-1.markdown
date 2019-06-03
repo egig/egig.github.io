@@ -9,8 +9,8 @@ wordpress_id: 103
 categories:
 - Review
 tags:
-- Search Engine
-- Solr
+- search-engine
+- solr
 ---
 
 I learnt a lot of interesting things. This has been a few months, since I started to read about search engine, particularly Solr. I need it because of the requirement at work, but I am really happy to do that. That was fun. So these are what I've got so far.

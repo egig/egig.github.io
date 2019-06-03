@@ -9,9 +9,9 @@ wordpress_id: 96
 categories:
 - Best Practices
 tags:
-- Configuration
-- Javascript
-- Nodejs
+- configuration
+- javascript
+- nodejs
 ---
 
 Hampir setiap kali kita membangun aplikasi, kita membutuhkan file konfigurasi. File konfigurasi untuk menyimpan data yang _configurable_ disesuaikan dengan _environment_ aplikasi. Contoh data koneksi database, data _credential_ API dan sebagainya. Berbeda orang atau tim, maka berbeda pula format file konfigurasi nya.<!-- more -->

@@ -9,8 +9,8 @@ wordpress_id: 109
 categories:
 - Review
 tags:
-- Laravel
-- PHP
+- laravel
+- php
 ---
 
 [Why Laravel](https://www.reddit.com/r/PHP/comments/1eld2t/why_would_anyone_choose_laravel_over_symfony_or) ? There is Taylor Otwel, Author of Laravel, commented at that post. Personally, one of the reason that I used to pick a framework is "taste", and I admit it, laravel has nice taste, Laravel has nice sintax. However, "Tak Kenal Maka Tak Sayang", that means if you don't really know, then you don't really love. Started about two weeks ago, I dig into Laravel. And Now, what I've got ?<!-- more -->

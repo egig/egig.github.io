@@ -9,8 +9,8 @@ wordpress_id: 102
 categories:
 - Thought
 tags:
-- Codeigniter
-- PHP
+- codeigniter
+- php
 ---
 
 This is why I think that Codeigniter is not suitable for a complex application.

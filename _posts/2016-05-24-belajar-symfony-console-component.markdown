@@ -9,8 +9,8 @@ wordpress_id: 54
 categories:
 - Tutorial
 tags:
-- PHP
-- Symfony
+- php
+- symfony
 ---
 
 Untuk memudahkan, kita harus sudah paham dulu penggunaan Composer dan konsep autoload-nya composer.

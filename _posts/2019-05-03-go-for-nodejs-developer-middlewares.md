@@ -5,8 +5,8 @@ layout: post
 slug: go-for-nodejs-developer-middlewares
 title: "Go for Nodejs Developer: Middlewares"
 tags:
-- Go
-- Middlewares
+- golang
+- middlewares
 ---
 
 I code in nodejs daily, end then comes everybody learn Go, maybe because most of decacorn start up company in my neighborhood uses Go, then here I am, learn Go as well. Not to mention that in fact we should always learn new(any)thing to survive, and [Why should you learn Go ?](https://medium.com/@kevalpatel2106/why-should-you-learn-go-f607681fad65) mentions its something that fit future hardware architecture, nothing to lose to learn Go by the way.<!-- more -->

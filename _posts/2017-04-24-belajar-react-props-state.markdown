@@ -9,8 +9,8 @@ wordpress_id: 34
 categories:
 - Tutorial
 tags:
-- Javascript
-- React
+- javascript
+- react
 ---
 
 Di React, kita menggunakan istilah "Component" untuk menggambarkan Komponen-komponen aplikasi atau interface yang ingin kita buat.
