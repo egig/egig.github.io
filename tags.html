@@ -14,10 +14,9 @@ permalink: /tags.html
 {% for temptag in sortedtemptags %}
   {% assign tagitems = temptag | split: '#' %}
   {% capture tagname %}{{ tagitems[1] }}{% endcapture %}
-  <code id="{{ tagname }}" class="highligher-rouge">
-  	<nobr>{{ tagname }}</nobr>
-  </code>
-  <br/>
+  <h4 id="{{ tagname }}" >
+  	#{{ tagname }}
+  </h4>
 
 	<div class="post">
 	<ul>
