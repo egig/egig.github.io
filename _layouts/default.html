@@ -20,18 +20,18 @@
 
   <body>
     <div class="wrapper-masthead">
-      <header class="masthead clearfix">
+      <div class="site-nav-wrapper clearfix">
       <div class="container">
-        
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
-
+        <div class="site-nav">
+          <a href="/">https://egig.org</a>
+        </div>
+        <div class="site-nav-right">
+          <a href="/feed.xml">Feed</a> |
+          <a href="/about.html">About</a> |
+          <a href="/archives.html">Archives</a>
+        </div>
       </div>
-      </header>
+      </div>
     </div>
 
     <div id="main" role="main" class="container">
@@ -42,12 +42,8 @@
       <div class="container">
         <footer class="footer">
           {% include svg-icons.html %}
-          <br/>
-          <br/>
           <div class="footer-nav">
-            <span>Its all yours under <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons CC0</a></span> |
-            <a href="/about.html">About</a> |
-            <a href="/archives.html">Archives</a>
+            <span>Its all yours under <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons CC0</a></span>
           <div>
         </footer>
       </div>
