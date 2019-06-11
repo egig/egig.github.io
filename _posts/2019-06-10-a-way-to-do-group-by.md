@@ -2,8 +2,8 @@
 author: egig
 date: 2019-06-10 13:00:00+00:00
 layout: post
-slug: better-way-to-do-group-by
-title: Better Way to Do Group By
+slug: a-way-to-do-group-by
+title: A Way to Do Group By
 tags:
 - database
 - sql
@@ -54,6 +54,29 @@ sql_mode=only_full_group_by
 
 There is already good [post](https://gabi.dev/2016/03/03/group-by-are-you-sure-you-know-it/) describe why the error happen and how to overcome this. It said that this is because mysql adhere some [spec](http://dev.cs.ovgu.de/db/sybase9/help/dbugen9/00000284.htm), which is good, and can be fixed by using aggregators function (`ANY_VALUE`, `MAX`, `MIN`, etc..) in the fields, include the fields in GROUP BY clause, or fully disable the `sql_mode`.
 
-But this is my experience. I discovered there is also better way to do Group By.
+But this is my experience. I discovered there is also better way to do Group By in certain case. If we need to do complex join multiple table, its straightforward to one to one relationship, but for on to many, this is I am gonna do it.
 
-...TBC
+
+Make use of above example, let say we need to get order count of each user. Then first, I will make distinc order table group by the user id.
+
+```sql
+SELECT COUNT(1) as order_count, o.order_id
+FROM orders
+GROUP BY o.order_id
+```
+
+And then, join the table with the user table using "Subquery", like this.
+
+```sql
+SELECT u.*m, uo.order_count
+FROM users as u
+JOIN (
+    SELECT COUNT(1) as order_count, o.order_id
+    FROM orders
+    GROUP BY o.order_id   
+) as uo on uo.user_id=u.id
+```
+
+This way make the query more clean and structured. I feel that way at least. And we also get rid of the `only_full_group_by sql_mode` compatibility. But Note, this query structure is not tested for its performance for complex query.
+
+
