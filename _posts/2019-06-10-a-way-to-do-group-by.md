@@ -68,7 +68,7 @@ GROUP BY o.order_id
 And then, join the table with the user table using "Subquery", like this.
 
 ```sql
-SELECT u.*m, uo.order_count
+SELECT u.*, uo.order_count
 FROM users as u
 JOIN (
     SELECT COUNT(1) as order_count, o.order_id
