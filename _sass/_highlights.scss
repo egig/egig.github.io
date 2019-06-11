@@ -5,6 +5,10 @@ div.highlight {
     border-radius: 2px
 }
 
+pre.highlight {
+    overflow: scroll;
+}
+
 
 code {
 	font-size: 80% !important;

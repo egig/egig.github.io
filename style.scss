@@ -19,18 +19,19 @@ html {
 
 body {
 	background: $white;
-  font: 18px/1.4 $georgia;
+  font: 16px/1.4 $georgia;
   color: #2a2e2e;
 }
 
 .container {
+  margin: auto;
   max-width: 740px;
   padding: 0 10px;
   width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
+  font-family: $georgia;
   color: $darkerGray;
   font-weight: bold;
 
@@ -44,14 +45,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 24px;
   a {
     color: inherit;
   }
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 22px;
 }
 
 h3 {
@@ -196,8 +197,8 @@ img {
   margin: 0;
   color: $darkGray;
   cursor: pointer;
-  font-family: $helveticaNeue;
-  font-weight: 300;
+  font-family: $georgia;
+  font-weight: 800;
   font-size: 28px;
   letter-spacing: 1px;
 }
@@ -239,11 +240,6 @@ img {
   .comments {
     margin-top: 10px;
   }
-
-  .read-more {
-    text-transform: uppercase;
-    font-size: 15px;
-  }
 }
 
 .wrapper-footer {
@@ -266,6 +262,10 @@ footer {
     color: #666666;
     font-weight: bolder;
   }
+}
+
+.post-tag {
+  font-size: 0.9em;
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS

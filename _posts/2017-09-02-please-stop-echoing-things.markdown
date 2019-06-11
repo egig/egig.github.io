@@ -42,8 +42,8 @@ With those powerful feature, we can rewrite code above little bit more handsome:
 <table>
   
     <tr>
-         <td>name; ?></td>
-         <td>email; ?></td>
+         <td><?= $row->name; ?></td>
+         <td><?= $row->email; ?></td>
     </tr>
   
 </table>

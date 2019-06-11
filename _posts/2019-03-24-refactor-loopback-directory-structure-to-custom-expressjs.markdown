@@ -58,8 +58,7 @@ This is what I do.
 2. Creat new structure in `src`, as you see, its pretty much like MVC, typical.
 3. Import `legacy/server.js` in  `src/server.js`, and use it as base of the application.
 4. Import `config.json` to `legecy/server/config.js` and export it. So we only take the reference. Same with other config, respectively.
-4. The most important things, move boot function to `src/server.js` and change the legacy root directory, `legacy/server` in this case.
-
+5. The most important things, move boot function to `src/server.js` and change the legacy root directory, `legacy/server` in this case.
 
 ```js
 boot(app, <path/to/legacy/server/dir>, function(err) {
@@ -70,5 +69,5 @@ boot(app, <path/to/legacy/server/dir>, function(err) {
 });
 ```
 
-5. that's it
+6. that's it
 
