@@ -60,8 +60,8 @@ But this is my experience. I discovered there is also better way to do Group By 
 Make use of above example, let say we need to get order count of each user. Then first, I will make distinc order table group by the user id.
 
 ```sql
-SELECT COUNT(1) as order_count, o.order_id
-FROM orders
+SELECT COUNT(1) as order_count, o.user_id
+FROM orders as o
 GROUP BY o.order_id
 ```
 
@@ -71,8 +71,8 @@ And then, join the table with the user table using "Subquery", like this.
 SELECT u.*, uo.order_count
 FROM users as u
 JOIN (
-    SELECT COUNT(1) as order_count, o.order_id
-    FROM orders
+    SELECT COUNT(1) as order_count, o.user_id
+    FROM orders as o
     GROUP BY o.order_id   
 ) as uo on uo.user_id=u.id
 ```
