@@ -15,7 +15,9 @@ I do google it and then end up to this [question](https://stackoverflow.com/ques
 
 And then I learn about Solr Index [Replication, Backup and Restore](https://lucene.apache.org/solr/guide/6_6/making-and-restoring-backups.html).
 
-I use Solr v6.6.0. It's farly easy, expescially I only install standalone mode. So all I need is execute this request in browser.
+I use Solr v6.6.0. It's farly easy, expescially I only install standalone mode. 
+
+First, we need to copy the Core configuration directory, usually called `conf` to new solr core. This is important because we need same data type and structure for the new server. Then all I need is execute this request in browser.
 
 ```
 GET http://localhost:8983/solr/collection-name/replication?command=backup&wt=json
@@ -124,5 +126,6 @@ The response you will get is similar to this
 ```
 
 I wait about an hour to get the "status" change from "In Progress" to "success".
+
 
 
