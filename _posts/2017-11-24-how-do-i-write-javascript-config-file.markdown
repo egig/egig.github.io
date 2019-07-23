@@ -3,8 +3,8 @@ author: egig
 comments: true
 date: 2017-11-24 07:06:46+00:00
 layout: post
-slug: cara-penulisan-file-konfigurasi-javascript
-title: Cara Penulisan File Konfigurasi Javascript
+slug: how-do-i-write-javascript-config-file
+title: How Do I Write Javascript Config File
 wordpress_id: 96
 categories:
 - Best Practices
