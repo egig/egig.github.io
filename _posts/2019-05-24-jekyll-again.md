@@ -33,12 +33,10 @@ With Hugo we need to setup the GitLab CI pipeline, and firebase hosting. with Je
 And I will just leave this script here. Simple script to run dockerized jekyll.
 
 ```sh
-export JEKYLL_VERSION=latest
 docker run --rm \
   -p 4000:4000 \
-  --volume="$PWD:/srv/jekyll" \
-  -it jekyll/jekyll:$JEKYLL_VERSION \
-  jekyll serve
+  --volume="$PWD":/usr/src/app \
+  -it starefossen/github-pages
 ```
 
 
