@@ -15,12 +15,14 @@
 
 html {
   font-size: 100%;
+  height: 100%;
 }
 
 body {
 	background: $white;
   font: 16px/1.4 $georgia;
   color: #2a2e2e;
+  height: 100%;
 }
 
 .container {
@@ -214,7 +216,6 @@ img {
 
 .site-nav-wrapper {
   border-bottom: 1px solid #ddd;
-  background-color: $lightGray;
   padding: 5px 0;
   font-size: 0.8em;
       font-family: $helveticaNeue;
@@ -266,8 +267,7 @@ img {
 .wrapper-footer {
   margin-top: 50px;
   border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  background-color: $lightGray;
+  border-bottom: none;
 }
 
 footer {
@@ -292,6 +292,15 @@ footer {
 
 .post-tag {
   font-size: 0.9em;
+}
+
+// Print
+@media print {
+  .site-nav-right,
+  .comments
+   {
+    display: none;
+  }
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
