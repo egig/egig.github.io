@@ -29,7 +29,7 @@ try {
   $Redis->discard();       //redis rollback
 }
 ```
-Rhis solution also not satisfy me. Then I did [stackoverflow-ing](https://stackoverflow.com/questions/16441645/transactions-when-writing-to-two-or-more-different-data-storages), [asking](https://stackoverflow.com/questions/58918287/maintain-data-integrity-between-mysql-and-redis) what if the rollback operation also error/failed.
+This solution also not satisfy me. Then I did [stackoverflow-ing](https://stackoverflow.com/questions/16441645/transactions-when-writing-to-two-or-more-different-data-storages), [asking](https://stackoverflow.com/questions/58918287/maintain-data-integrity-between-mysql-and-redis) what if the rollback operation also error/failed.
 
 One suggests using 2 Phase Commit and Saga Patterns, ya then I do some research.
 
