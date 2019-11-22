@@ -5,14 +5,14 @@ layout: post
 slug: at-the-end-we-do-it-ourself
 title: At the End, We Do it Ourself 
 tags:
-- microserices
+- microservices
 ---
 
 I just learn about microservices. Then I got this kind of problem. Distributed data management problem. Its actually simple, I think, but this is kind of new problem I faced because I never focus on backend before. Then here it is I will just write it down.
 
 I just join a new company, new team. Then I get this legacy application, a web service. This app pretty much like inventory app, where you can purchase and deduct stock. And its just that.
 
-And here is the problem, the purchase transaction is recorded in MySql Database and the stock is stored as cache in Redis. Ya, the problem is doing a purchase transaction means you have to atomically insert record to MySql and deduct value in redis. The legacy code I found is just doing insert and update stock, I found no line that make this atomic. Ya, questions comes to my mind, what if, Mysql insert sucess, but redis is down, then the data will not fully integrated.
+And here is the problem, the purchase transaction is recorded in MySql Database and the stock is stored as cache in Redis. Ya, the problem is doing a purchase transaction means you have to atomically insert record to MySql and deduct value in redis. The legacy code I found is just doing insert and update stock, I found no line that make this atomic. Ya, questions comes to my mind, what if, Mysql insert success, but redis is down, then the data will not fully integrated.
 
 I ask arround my team. One suggest to wrap the process with the mysql transaction like this
 
@@ -35,7 +35,7 @@ One suggests using 2 Phase Commit and Saga Patterns, ya then I do some research.
 
 [![What Happens when Compensating Requests Fail?](https://firebasestorage.googleapis.com/v0/b/primarily-49b38.appspot.com/o/Screen%20Shot%202019-11-22%20at%2013.15.38.png?alt=media&token=59b9b770-a09c-40d2-af1e-aabece2387ef)](<https://www.youtube.com/watch?v=xDuwrtwYHu8>)
 
-Got this conference talk, the presentation is pretty clear. I get the idea that certain request must have its compensating request. And I think I get somethng related to my problem. At arrount minute 21.40, this slide "What Happens when Compensating Requests Fail ?", the presenter said
+Got this conference talk, the presentation is pretty clear. I get the idea that certain request must have its compensating request. And I think I get something related to my problem. At arrount minute 21.40, this slide "What Happens when Compensating Requests Fail ?", the presenter said
 
 "...because they can fail we need to be able to retry them indefinitely until they succeed..."
 
