@@ -19,25 +19,24 @@ html {
 }
 
 body {
-	background: $white;
-  font: 16px/1.4 $georgia;
+  background: $white;
+  font: 14px/1.4 monospace;
   color: #2a2e2e;
   height: 100%;
 }
 
 .container {
-  margin: auto;
   max-width: 740px;
   padding: 0 10px;
   width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $georgia;
+  font-family: monospace;
   color: $darkerGray;
   font-weight: bold;
 
-  line-height: 1.7;
+  //line-height: 1.7;
   margin: 1em 0 15px;
   padding: 0;
 
@@ -47,37 +46,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 18px;
   a {
     color: inherit;
   }
 }
 
 h2 {
-  font-size: 22px;
+  font-size: 17px;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 16.5px;
 }
 
 h4 {
-  font-size: 18px;
+  font-size: 16px;
   color: $gray;
 }
 
 p {
   margin: 15px 0;
-  text-align: justify;
-}
-
-a {
-  color: $blue;
-  text-decoration: none;
-	cursor: pointer;
-  &:hover, &:active {
-    color: $blue;
-  }
 }
 
 ul, ol {
@@ -156,7 +145,6 @@ img {
 //
 
 .wrapper-masthead {
-  margin-bottom: 25px;
 }
 
 .masthead {
@@ -215,24 +203,29 @@ img {
 }
 
 .site-nav-wrapper {
-  border-bottom: 1px solid #ddd;
   padding: 5px 0;
-  font-size: 0.8em;
-      font-family: $helveticaNeue;
-  color: #777777;
-  a {
-    color: #666666;
-    font-weight: bolder;
-  }
+  background-color: #EEEEEE;
 }
 
 
 .site-nav {
     float: left;
+
+  @include mobile {
+    display: block;
+    float: none;
+  }
 }
 
 .site-nav-right {
+   text-align: right;
     float: right;
+
+  @include mobile {
+    display: block;
+    text-align: left;
+    float: none;
+  }
 }
 
 //
@@ -266,7 +259,7 @@ img {
 
 .wrapper-footer {
   margin-top: 50px;
-  border-top: 1px solid #ddd;
+  //border-top: 1px solid #ddd;
   border-bottom: none;
 }
 
@@ -277,7 +270,6 @@ footer {
 }
 
 .footer-nav {
-  font-family: $helveticaNeue;
   color: #777777;
   a {
     color: #666666;
@@ -287,11 +279,6 @@ footer {
 
 .post-title-wrapper {
   text-align: center;
-  margin-bottom: 25px;
-}
-
-.post-tag {
-  font-size: 0.9em;
 }
 
 // Print

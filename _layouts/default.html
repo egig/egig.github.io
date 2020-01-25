@@ -14,24 +14,29 @@
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
 
   <body>
-    <div class="wrapper-masthead">
+    <div class="wrapper-masthead container">
       <div class="site-nav-wrapper clearfix">
-      <div class="container">
         <div class="site-nav">
-          <a href="/">{{ site.name }}</a>
+          [<a href="/">{{ site.name }}</a>]
+          <br/>
+          <br/>
+          <span id="updated-at"></span>
         </div>
         <div class="site-nav-right">
-          <a href="/about.html">About</a> |
-          <a href="/search.html">Search</a> |
-          <a href="/archives.html">Archives</a> |
-          <a href="/feed.xml">Feed</a>
+          [<a href="/about.html">About</a>]
+          [<a href="/search.html">Search</a>]
+          [<a href="/archives.html">Archives</a>]
+          [<a href="/feed.xml">RSS</a>]
+<!--          <br/>-->
+<!--          <br/>-->
+<!--          Owner: <span id="owner"></span>-->
         </div>
-      </div>
       </div>
     </div>
 
@@ -51,5 +56,13 @@
     </div>
 
     {% include analytics.html %}
+    <script type="application/javascript">
+      $(document).ready(function () {
+        $.get("https://api.github.com/repos/egig/egig.github.io")
+                .then(r => {
+                  $("#updated-at").text("Site Updated at:" + r["updated_at"]);
+                })
+      })
+    </script>
   </body>
 </html>
