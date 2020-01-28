@@ -81,11 +81,11 @@ Have a look into `vendor/laravel/framework/src/Illuminate/Route/RoutingServicePr
 
 
     
-    
-    $this->app['router'] = $this->app->share(function($app)
-    {
-        $router = new Router($app); //<<-- has namespace Illuminate\Routing 
-    
+```php
+$this->app['router'] = $this->app->share(function($app)
+{
+    $router = new Router($app); //<<-- has namespace Illuminate\Routing 
+```   
 
 
 

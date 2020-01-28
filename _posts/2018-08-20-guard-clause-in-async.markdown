@@ -17,7 +17,7 @@ I really like Guard Clause, it makes me easier to read coding flow. Ya, you migh
 But, when it comes to javascript, its always be exhausted. Javascript is exhausting. I dive in to async world in javascript two years ago and still don't know to use Guard Clause in it. Ya, this code won't work whatsoever:
 
 
-```js
+```javascript
 function getItem(type) {
 
     if(type == 1) {
@@ -55,7 +55,7 @@ Lets take example for Martin Fowler website above, but in js.
 
 
     
-```js
+```javascript
 function getPayAmount() {
   if (_isDead) return deadAmount();
   if (_isSeparated) return separatedAmount();
@@ -69,7 +69,7 @@ If functions `deadAmount`, `separatedAmount`, `retiredAmount` and `normalPayAmou
 
 
     
-```js
+```javascript
 function getPayAmount(callback) {
   if (_isDead) return deadAmount().then(callback);
   if (_isSeparated) return separatedAmount().then(callback);
@@ -82,7 +82,7 @@ function getPayAmount(callback) {
 Ya but actually we can do it better like this.
 
 
-```js 
+```javascript
 function getPayAmount() {
   if (_isDead) return deadAmount();
   if (_isSeparated) return separatedAmount();
@@ -101,7 +101,7 @@ Or better better, we can use IIFE if `getPayAmount` doesn't necessary to be reus
 
 
     
-```js
+```javascript
 (function getPayAmount() {
   if (_isDead) return deadAmount();
   if (_isSeparated) return separatedAmount();

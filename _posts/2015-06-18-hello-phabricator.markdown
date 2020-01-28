@@ -43,13 +43,11 @@ You can follow the instruction https://secure.phabricator.com/book/phabricator/a
 
 
     
+```shell
+cd  /path/tp/phabricator/support/bin
+sudo ln -sv /usr/lib/git-core/git-http-backend
+```  
     
-    cd  /path/tp/phabricator/support/bin
-    sudo ln -sv /usr/lib/git-core/git-http-backend
-    
-
-
-
 **Herald**
 Herald is phabricator application you can use to control data in phabricator, for example, In my company I need to restrict some push when no accepted revision exists, then I use herald to control it. I make the herald rule as following:
 
@@ -74,13 +72,12 @@ and edit differential.fields to the following:
 
 
     
-    
-     "differential:test-plan": {
-        "key": "differential:test-plan",
-        "disabled": true
-    }
-    
-
-
+```json
+ "differential:test-plan": {
+    "key": "differential:test-plan",
+    "disabled": true
+}
+```
+   
 
 You can go to Config application by clicking Config on sidebar menu.
