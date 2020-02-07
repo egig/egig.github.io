@@ -2,7 +2,7 @@
 author: egig
 date: 2020-01-27 10:00:00+00:00
 layout: post
-slug: 2020-01-27-create-and-update-database-mysql
+slug: create-and-update-database-mysql
 title: Create and Update Database MySQL
 tags:
 - mysql
