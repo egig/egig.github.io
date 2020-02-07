@@ -74,6 +74,11 @@ And we create the composite index for 3 column with order `first_name`, `last_na
 That composite index will not used if we query for `status` only, but will be useful if we  query
 for `first_name` column.
 
+### Default Value
+Do not forget add to default value to new column if you are updating
+existing application since, as what I've experienced this often
+leads to error `Field X doesn't have default value.`
+
 ### Data migration
 
 When updating table structure, do not forget to check whether its affecting the existing data,
