@@ -5,6 +5,7 @@ layout: post
 slug: versioning-grpc-services-example-in-go
 title: Versioning gRPC Services Example in Go
 tags:
+- golang
 - grpc
 - microservices
 ---
