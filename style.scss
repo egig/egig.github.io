@@ -20,7 +20,7 @@ html {
 
 body {
   background: $white;
-  font: 14px/1.4 monospace;
+  font: 14px/1.4 Verdana;
   color: #2a2e2e;
   height: 100%;
 }
@@ -29,10 +29,11 @@ body {
   max-width: 740px;
   padding: 0 10px;
   width: 100%;
+  margin: auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: monospace;
+  font-family: inherit;
   color: $darkerGray;
   font-weight: bold;
 
@@ -46,18 +47,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 18px;
+  font-size: 22px;
   a {
-    color: inherit;
+    color: $blue;
+    text-decoration: none;
+  }
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
   }
 }
 
 h2 {
-  font-size: 17px;
+  font-size: 20px;
 }
 
 h3 {
-  font-size: 16.5px;
+  font-size: 18px;
 }
 
 h4 {
@@ -204,7 +215,6 @@ img {
 
 .site-nav-wrapper {
   padding: 5px 0;
-  background-color: #EEEEEE;
 }
 
 
@@ -287,6 +297,32 @@ footer {
   .comments
    {
     display: none;
+  }
+}
+
+.svg-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  fill: currentColor;
+  padding: 5px 3px 2px 5px;
+  vertical-align: text-bottom;
+  color: orange;
+}
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-item {
+  padding: 10px;
+  display: inline-block;
+  cursor: pointer;
+
+  &:hover {
+    //background-color: $gray;
   }
 }
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.title }} – {{ site.description }}</title>
 
     {% if site.tags != "" %}
       {% include collecttags.html %}
@@ -23,19 +23,14 @@
     <div class="wrapper-masthead container">
       <div class="site-nav-wrapper clearfix">
         <div class="site-nav">
-          [<a href="/">{{ site.name }}</a>]
-          <br/>
-          <br/>
-          <span id="updated-at"></span>
+          <a href="/"><img style="width:80px;margin-left:-8px;" alt="{{ site.title }}" src="/images/logo.png"/></a>
         </div>
         <div class="site-nav-right">
-          [<a href="/about.html">About</a>]
-          [<a href="/search.html">Search</a>]
-          [<a href="/archives.html">Archives</a>]
-          [<a href="/feed.xml">RSS</a>]
-<!--          <br/>-->
-<!--          <br/>-->
-<!--          Owner: <span id="owner"></span>-->
+          <ul class="nav-list">
+            <li class="nav-item" ><a href="/about.html">About</a></li>
+            <li class="nav-item" ><a href="/search.html">Search</a></li>
+            <li class="nav-item" ><a href="/archives.html">Archives</a></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -49,7 +44,13 @@
         <footer class="footer">
           {% include svg-icons.html %}
           <div class="footer-nav">
+            <a href="{{ 'feed.xml' | relative_url }}">
+              <svg class="svg-icon orange">
+                <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
+              </svg><span>Subscribe</span>
+            </a> |
             <span>Its all yours under <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons CC0</a></span>
+            <span id="updated-at"></span>
           <div>
         </footer>
       </div>
@@ -60,7 +61,7 @@
       $(document).ready(function () {
         $.get("https://api.github.com/repos/egig/egig.github.io")
                 .then(r => {
-                  $("#updated-at").text("Site Updated at:" + r["updated_at"]);
+                  $("#updated-at").text("| Site Updated at:" + r["updated_at"]);
                 })
       })
     </script>
