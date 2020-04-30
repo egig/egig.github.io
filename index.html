@@ -19,16 +19,17 @@ layout: default
 
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
-<!--      <span>-->
-<!--	  {% for tag in post.tags %}-->
-<!--	    {% capture tag_name %}{{ tag }}{% endcapture %}-->
-<!--      <a class="post-tag" href="/tags#{{ tag_name }}">#{{ tag_name }}</a>-->
-<!--	  {% endfor %}-->
-<!--	 </span>-->
+      <span> {{ post.date | date: " %e %B %Y" }}</span> |
+      <span>
+	  {% for tag in post.tags %}
+	    {% capture tag_name %}{{ tag }}{% endcapture %}
+      <a class="post-tag" href="/tags#{{ tag_name }}">#{{ tag_name }}</a>
+	  {% endfor %}
+	 </span>
 
       <div class="entry">
         {{ post.excerpt }}
-        [<a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read</a>]
+<!--        [<a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read</a>]-->
       </div>
     </article>
   {% endfor %}

@@ -20,7 +20,7 @@ html {
 
 body {
   background: $white;
-  font: 16px/1.4 Georgia;
+  font: 16px/1.4 $arial;
   color: #2a2e2e;
   height: 100%;
 }
@@ -155,6 +155,12 @@ img {
 //
 
 .wrapper-masthead {
+  background-color: $darkGray;
+  color: $lightGray;
+
+  a {
+    color: $lightGray;
+  }
 }
 
 .masthead {
@@ -194,11 +200,11 @@ img {
 
 .site-name {
   margin: 0;
-  color: $darkGray;
+  padding: 10px 0;
   cursor: pointer;
-  font-family: $georgia;
+  font-family: inherit;
   font-weight: 800;
-  font-size: 28px;
+  font-size: 20px;
   letter-spacing: 1px;
 }
 
@@ -213,8 +219,7 @@ img {
 }
 
 .site-nav-wrapper {
-  padding: 5px 0 5px 10px;
-  background-color: $lightGray;
+  padding: 5px 0;
 }
 
 
