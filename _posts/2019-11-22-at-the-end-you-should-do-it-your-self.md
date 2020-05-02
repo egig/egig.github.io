@@ -33,7 +33,7 @@ This solution also not satisfy me. Then I did [stackoverflow-ing](https://stacko
 
 One suggests using 2 Phase Commit and Saga Patterns, ya then I do some research.
 
-[![What Happens when Compensating Requests Fail?](https://firebasestorage.googleapis.com/v0/b/primarily-49b38.appspot.com/o/Screen%20Shot%202019-11-22%20at%2013.15.38.png?alt=media&token=59b9b770-a09c-40d2-af1e-aabece2387ef)](<https://www.youtube.com/watch?v=xDuwrtwYHu8>)
+[![What Happens when Compensating Requests Fail?](https://user-images.githubusercontent.com/3479556/80872004-6f38b280-8cd9-11ea-8871-634bbe81c16b.png)](<https://www.youtube.com/watch?v=xDuwrtwYHu8>)
 
 Got this conference talk, the presentation is pretty clear. I get the idea that certain request must have its compensating request. And I think I get something related to my problem. At arrount minute 21.40, this slide "What Happens when Compensating Requests Fail ?", the presenter said
 
@@ -43,7 +43,7 @@ Also my question at SO got similar answer.
 
 Then, question again, can we rely on machine to do something indefinitely ? well, this need another research. LOL. And comes to my mind that, Eventually, at the end we need to do it by ourself.
 
-!["I'll do it myself..." Thanos.](https://i.imgflip.com/308kyx.jpg)
+!["I'll do it myself..." Thanos.](https://user-images.githubusercontent.com/3479556/80871991-55976b00-8cd9-11ea-976a-0fdb21ab9523.jpg)
 
 Some points to note for me for next development.
 + Avoid distributed data model if it's possible
