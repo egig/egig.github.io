@@ -2,8 +2,8 @@
 author: egig
 date: 2020-01-27 10:00:00+00:00
 layout: post
-slug: create-and-update-database-mysql
-title: Create and Update Database MySQL
+slug: some-consideration-on-designing-database
+title: Some Consideration on Designing Database
 tags:
 - mysql
 - database
