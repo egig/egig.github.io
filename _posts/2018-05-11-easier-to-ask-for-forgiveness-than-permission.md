@@ -10,6 +10,7 @@ categories:
 - Best Practices
 tags:
 - python
+- best-practice
 ---
 
 Baru tau kalo ada yang namanya prinsip EAFP dalam pemrograman. EAFP Principle as you might can google it, it is a principle or pattern to write code in python. Pretty sure we can use it in other programming language as well.<!-- more -->
