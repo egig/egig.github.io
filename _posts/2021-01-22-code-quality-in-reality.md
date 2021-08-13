@@ -9,7 +9,7 @@ tags:
 - development
 ---
 
-Hi 2021, this is me again writing to you. It's surprising I still want to write a blog post,
+It's surprising I still want to write a blog post,
 actually, I want to write a letter to my future self.
 I've been a software developer, doing coding for about 7 years now, a few years ago I always
 dream about having excellent, perfect the code quality that readable, maintainable, no stupid bugs, etc...
