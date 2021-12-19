@@ -9,9 +9,7 @@ tags:
 - development
 ---
 
-It's surprising I still want to write a blog post,
-actually, I want to write a letter to my future self.
-I've been a software developer, doing coding for about 7 years now, a few years ago I always
+I've been a software developer, doing coding for about 9 years now, a few years ago I've always
 dream about having excellent, perfect the code quality that readable, maintainable, no stupid bugs, etc...
 yet here I am, at this point, experiencing the same thing over years, over time,
 then I think I get to the conclusion I want to share with you. 
