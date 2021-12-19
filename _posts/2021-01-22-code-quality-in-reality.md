@@ -25,7 +25,7 @@ times when he wrote the code. Maybe the deadline is too tight, at the time. Mayb
 a health issue, family issue and bad manager,
 Maybe the manager has bad manager, etc.
 Anyway, I will not blame anyone again for bad legacy code
-or anything, because I was one of the former developer himeself.
+or anything, because I was one of the former developer myself.
 
 Who is responsible for code quality ? I think everybody is responsible for writing good quality code.
 How about tech leads? managers? they can be partners to do
