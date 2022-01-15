@@ -25,8 +25,7 @@ Then I find its easy and very applicable.
 
 The Idea is to register all supported server implementation to one gRPC server.
 
-```go
-
+```golang
 import (
 //..
 pb "./helloworld"
@@ -65,7 +64,7 @@ to create the example implementation.
 See that I create two protobuf `helloworld` and `hellowordv2`.
 And register both server implementation in the gRPC server.
 
-```go
+```golang
 pb.RegisterGreeterServer(s, &server{})
 pb2.RegisterGreeterServer(s, &serverV2{})
 ```

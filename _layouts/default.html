@@ -15,8 +15,6 @@
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
 
   <body>
@@ -51,20 +49,12 @@
               </svg><span>Subscribe</span>
             </a> |
             <span>Its all yours under <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons CC0</a></span>
-            <span id="updated-at"></span>
           <div>
         </footer>
       </div>
     </div>
 
     {% include analytics.html %}
-    <script type="application/javascript">
-      $(document).ready(function () {
-        $.get("https://api.github.com/repos/egig/egig.github.io")
-                .then(r => {
-                  $("#updated-at").text("| Site Updated at:" + r["updated_at"]);
-                })
-      })
     </script>
   </body>
 </html>
