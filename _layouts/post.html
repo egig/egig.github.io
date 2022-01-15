@@ -5,7 +5,8 @@ layout: default
 <article class="post">
   <div class="post-title-wrapper">
     <h1 class="post-title">{{ page.title }}</h1>
-
+    <div class="post-meta">
+      <span><a href="{{site.url}}">{{ site.title }}</a></span> |
       <span> {{ page.date | date: " %B %e, %Y" }}</span> |
       <span>
 	  {% for tag in page.tags %}
@@ -13,6 +14,7 @@ layout: default
       <a class="post-tag" href="/tags/{{ tag_name }}">#{{ tag_name }}</a>
 	  {% endfor %}
 	 </span>
+   </div>
  </div>
 
   <div class="entry">

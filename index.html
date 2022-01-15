@@ -2,20 +2,24 @@
 layout: default
 ---
 
+<h1 class="site-name">{{ site.title }}</h1>
 <div class="posts">
   {% for post in paginator.posts %}
     <article class="post">
-
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <span> {{ post.date | date: " %B %e, %Y" }}</span> |
-      <span>
-      {% for tag in post.tags %}
-        {% capture tag_name %}{{ tag }}{% endcapture %}
-        <a class="post-tag" href="/tags/{{ tag_name }}">#{{ tag_name }}</a>
-      {% endfor %}
-    </span>
-      <div class="entry">
+      <div class="post-title-wrapper">
+        <h1 class="post-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+        <div class="post-meta">
+          <span> {{ post.date | date: " %B %e, %Y" }}</span> |
+          <span>
+        {% for tag in post.tags %}
+          {% capture tag_name %}{{ tag }}{% endcapture %}
+          <a class="post-tag" href="/tags/{{ tag_name }}">#{{ tag_name }}</a>
+        {% endfor %}
+       </span>
+       </div>
+     </div>
+     
+      <div class="entry" style="text-align: center;">
         {{ post.excerpt }}
       </div>
     </article>
