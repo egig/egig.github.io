@@ -20,8 +20,8 @@ html {
 
 body {
   background: $white;
-  font: 16px/1.4 $helveticaNeue;
-  color: #2a2e2e;
+  font: 16px/1.4 "Garamond";
+  color: $darkGray;
   height: 100%;
 }
 
@@ -34,7 +34,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: inherit;
-  color: $darkerGray;
+  color: $darkGray;
   font-weight: bold;
 
   //line-height: 1.7;
@@ -54,8 +54,8 @@ h1 {
 }
 
 a {
-  color: $blue;
-  text-decoration: none;
+  color: inherit;
+  text-decoration: underline;
 
   &:hover {
     text-decoration: underline;

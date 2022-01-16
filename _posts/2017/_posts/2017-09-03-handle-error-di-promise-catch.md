@@ -21,31 +21,29 @@ Mungkin teman-teman pernah dengar, kalo kita `throw`-ing error di `resolve` func
 
 
     
-    
-    let p1 = function foo(a) {
-      return new Promise((resolve, reject) => {
-        return resolve(a);
-      });
-    }
-    
-    p1(0).then((result) => {
-      throw Error('error from then');
-      console.log("from THEN: ", result);
-    })
-    .catch((e) => {
-      console.log("from CATCH:", e);
-    })
-    
+```js
+let p1 = function foo(a) {
+  return new Promise((resolve, reject) => {
+    return resolve(a);
+  });
+}
 
-
+p1(0).then((result) => {
+  throw Error('error from then');
+  console.log("from THEN: ", result);
+})
+.catch((e) => {
+  console.log("from CATCH:", e);
+})
+```
 
 Output yang akan keluar kira-kira seperti berikut:
 
-    
-    
-    from CATCH: Error: error from then
-        at p1.then (evalmachine.<anonymous>:8:11)
-        at <anonymous>
+```js
+from CATCH: Error: error from then
+    at p1.then (evalmachine.<anonymous>:8:11)
+    at <anonymous>
+```
     
 
 
@@ -54,36 +52,32 @@ Artinya, tidak perlu khawatir jika ada typo atau programmer error yang lain di b
 
 Pada awalnya saya kira `then`-`catch` ini sama dengan `try`-`catch`. Ternyata nggak sama sekali. Baru saya ketahui setelah saya test error di block `catch`:
 
-
-    
-    
-    p1(0).then((result) => {
-      console.log("from THEN: ", result);
-    })
-    .catch((e) => {
-      console.log(x);
-      console.log("from CATCH:", e);
-    })
-    
-
-
+```js
+p1(0).then((result) => {
+  console.log("from THEN: ", result);
+})
+.catch((e) => {
+  console.log(x);
+  console.log("from CATCH:", e);
+})
+```
 
 Yang saya harapkan adalah muncul `ReferenceError: x not defined`. Tetapi nggak, malah silent error. Dan ini bahaya sekali. Kenapa silent Error ? Ini by design, karena setiap error akan otomatis jadi `Rejection` dan di teruskan ke resolver/rejector selanjutnya, maka kita harus menambah block `catch` lagi:
 
 
     
-    
-    p1(0).then((result) => {
-      console.log("from THEN: ", result);
-    })
-    .catch((e) => {
-      console.log(x);
-      console.log("from CATCH:", e);
-    })
-    .catch((e) => {
-      console.log("from CATCH2:", e);
-    })
-    
+```js 
+p1(0).then((result) => {
+  console.log("from THEN: ", result);
+})
+.catch((e) => {
+  console.log(x);
+  console.log("from CATCH:", e);
+})
+.catch((e) => {
+  console.log("from CATCH2:", e);
+})
+```
 
 
 
@@ -93,13 +87,12 @@ Lalu saya googling sedikit dan dapet solusinya, sebagai berikut.
 
 
     
-    
-     process.on("unhandledRejection", function(error, promise){
-       // handle  error disini
-     });
-    
 
-
+```js
+process.on("unhandledRejection", function(error, promise){
+  // handle  error disini
+});
+``` 
 
 Kita bisa menuliskan kode diatas sebelum kode javascript kita yang lainnya. Sekian.
 
