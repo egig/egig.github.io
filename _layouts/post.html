@@ -7,7 +7,12 @@ layout: default
     <h1 class="post-title">{{ page.title }}</h1>
     <div class="post-meta">
       <span><a href="{{site.url}}">{{ site.title }}</a></span> |
-      <span> {{ page.date | date: " %B %e, %Y" }}</span> |
+      <span>
+        {% assign d = page.date | date: "%-d" %}
+        {{ page.date | date: "%B" }} 
+        {% case d %}{% when "1" or "21" or "31" %}{{ d }}st{% when "2" or "22" %}{{ d }}nd{% when "3" or "23" %}{{ d }}rd{% else %}{{ d }}th{% endcase %}, 
+        {{ page.date | date: "%Y" }}
+      </span> |
       <span>
 	  {% for tag in page.tags %}
 	    {% capture tag_name %}{{ tag }}{% endcapture %}

@@ -12,6 +12,8 @@
 /**************/
 /* BASE RULES */
 /**************/
+// @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
 
 html {
   font-size: 100%;
@@ -20,9 +22,11 @@ html {
 
 body {
   background: $white;
-  font: 16px/1.4 "Garamond";
+  font-size: 20px;
+  font-family: 'Source Serif Pro', Garamond, serif;
   color: $darkGray;
   height: 100%;
+  line-height: 1.5em;
 }
 
 .container {
@@ -47,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 36px;
   a {
     text-decoration: none;
   }
@@ -63,20 +67,20 @@ a {
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 30px;
 }
 
 h3 {
-  font-size: 18.72px;
+  font-size: 26.72px;
 }
 
 h4 {
-  font-size: 16px;
+  font-size: 20px;
   color: $gray;
 }
 
 p {
-  margin: 15px 0;
+  margin: 1.6em 0;
 }
 
 ul, ol {
