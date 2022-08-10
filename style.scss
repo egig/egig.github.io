@@ -20,11 +20,11 @@ html {
 
 body {
   background: $white;
-  font-size: 20px;
-  font-family: Garamond, serif;
+  font-size: 18px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   color: $darkGray;
   height: 100%;
-  line-height: 1.25em;
+  line-height: 1.5em;
 }
 
 .container {
@@ -35,7 +35,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: inherit;
+  font-family: Garamond, 'Times New Roman', Times, serif;
   color: $darkGray;
   font-weight: bold;
 

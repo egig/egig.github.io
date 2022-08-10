@@ -5,7 +5,7 @@ layout: page
 <div class="posts">
   {% for post in paginator.posts %}
     <article class="post">
-      <div class="post-title-wrapper">
+      <div>
         <h2 class="post-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
         <div class="post-meta">
           <span>
@@ -23,9 +23,7 @@ layout: page
        </div>
      </div>
      
-      <div class="entry"
-      
-      >
+      <div class="entry">
         {{ post.excerpt }}
       </div>
     </article>
