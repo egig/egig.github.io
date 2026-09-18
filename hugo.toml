@@ -22,6 +22,7 @@ ignoreErrors = ["error-disable-taxonomy"]
   description = "Personal notes on software engineering and other computer science things."
   favicon = "favicon.ico"
   enablePostNavigator = true
+  hideMadeWithLine = true
 
 [caches.images]
   dir = ":cacheDir/images"
@@ -51,4 +52,3 @@ ignoreErrors = ["error-disable-taxonomy"]
   name = "LinkedIn"
   url = "https://www.linkedin.com/in/egigdr/"
   weight = 1
-
