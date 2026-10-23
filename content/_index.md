@@ -2,7 +2,7 @@
 title: Egi Gundari
 ---
 
-<img src="/images/author.png" alt="Egi" width="180" style="border-radius:8px;float:right;margin:0 0 1rem 1.5rem;max-width:40%;" />
+<img class="author" src="/images/author.png" alt="Egi" width="180" style="border-radius:8px;float:right;margin:0 0 1rem 1.5rem;max-width:40%;" />
 
 # Egi Gundari
 Technical Lead & Software Engineer, Jakarta, Indonesia.
@@ -24,6 +24,7 @@ Open for hire, or as technical partner to build a product with.
 
 A few things I've built and worked on.
 
+- [Alur.sh](https://alur.sh) — workflow automation for service business.
 - [Hvsna](https://play.google.com/store/apps/details?id=com.hvsna.app) — organize your day around prayers.
 - [Baim - Batch Imagery](https://egig.github.io/baim/) — desktop app to prompt-edit AI image in batch.
 - [Jane - Just Another Naming Engine](https://github.com/egig/jane) — generate names for you app or agents.

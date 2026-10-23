@@ -1,7 +1,7 @@
 # Base URL used when generating links to your pages.
 baseURL = "https://egig.github.io/"
 
-theme = "hugo-bearblog"
+theme = "egig"
 
 title = "egig.github.io"
 author = "egig"
@@ -10,7 +10,7 @@ locale = "en-US"
 # Generate a robots.txt for SEO.
 enableRobotsTXT = true
 
-# Generate "Bear Blog"-like URLs only, see https://bearblog.dev/.
+# Generate "Bear Blog"-like URLs only
 disableKinds = ["taxonomy"]
 ignoreErrors = ["error-disable-taxonomy"]
 
@@ -28,17 +28,11 @@ ignoreErrors = ["error-disable-taxonomy"]
   dir = ":cacheDir/images"
 
 [markup.highlight]
-  style = "friendly"
-  lineNos = true
+  style = "github"
+  lineNos = false
   lineNumbersInTable = false
   codeFences = true
 
 [markup.goldmark.renderer]
   # Posts carry raw HTML inherited from the Jekyll/kramdown source
-  # (e.g. <img>, <strike>); allow it through same as before.
   unsafe = true
-
-[[menu.main]]
-  name = "Home"
-  url = "/"
-  weight = 1
