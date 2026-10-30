@@ -4,7 +4,7 @@
     --font-main: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, "Times New Roman", serif;
     --font-secondary: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, "Times New Roman", serif;
     --font-scale: 1em;
-    --background-color: #e4d4bf;
+    --background-color: #fff;
     --heading-color: #2b2118;
     --text-color: #3a3026;
     --link-color: #9a3412;
@@ -98,17 +98,7 @@
     align-items: center;
   }
 
-  #theme-toggle {
-    margin-left: auto;
-    padding: 4px 8px;
-    font-size: 1.1em;
-    line-height: 1;
-    background: none;
-    border: none;
-    border-radius: 6px;
-  }
-
-  time {
+time {
     font-family: monospace;
     font-style: normal;
     font-size: 0.9em;
@@ -172,8 +162,11 @@
   }
 
   footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 40px 0 20px 0;
-    text-align: center;
+    font-size: 0.8em;
     color: var(--blockquote-color);
   }
 
@@ -241,7 +234,7 @@
 
   [data-theme="light"] {
     --photo-filter: none;
-    --background-color: #e4d4bf;
+    --background-color: #fff;
     --heading-color: #2b2118;
     --text-color: #3a3026;
     --link-color: #9a3412;

@@ -1,1 +1,20 @@
-{{ if not (.Param "hideMadeWithLine") }}Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>{{ end }}
+<a href="javascript:void(0)" id="theme-toggle">Dark mode</a>
+<span>© {{ now.Year }} {{ .Site.Title }}</span>
+<script>
+(function() {
+  var toggle = document.getElementById('theme-toggle');
+  var root = document.documentElement;
+  function updateLabel() {
+    var current = root.getAttribute('data-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    toggle.textContent = current === 'dark' ? 'Light mode' : 'Dark mode';
+  }
+  updateLabel();
+  toggle.addEventListener('click', function() {
+    var current = root.getAttribute('data-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    var next = current === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    updateLabel();
+  });
+})();
+</script>

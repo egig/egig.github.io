@@ -2,9 +2,8 @@
 title: Egi Gundari
 ---
 
-<img class="author" src="/images/author.png" alt="Egi" width="180" style="border-radius:8px;float:right;margin:0 0 1rem 1.5rem;max-width:40%;" />
+<img class="author" src="/images/author.jpeg" alt="Egi" width="180" style="border-radius:8px;float:right;margin:0 0 1rem 1.5rem;max-width:40%;" />
 
-# Egi Gundari
 Technical Lead & Software Engineer, Jakarta, Indonesia.
 
 Open for hire, or as technical partner to build a product with.
