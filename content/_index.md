@@ -19,11 +19,12 @@ Open for hire, or as technical partner to build a product with.
 - **Clarity** — Give you visibility into your data, engineering team, and resources — workload, capacity, and progress — so you can make better decisions.
 - **Technical Partner** — Strategic planning and sound technical decisions, plus guidance on framing the right questions for AI agents to get reliable, useful results.
 
-## Hobby Projects
+## Projects
 
 A few things I've built and worked on.
 
 - [Alur.sh](https://alur.sh) — workflow automation for service business.
+- [Sideagent](https://egig.github.io/sideagent/) — open-source AI assistant that answers from your product docs and cites its sources.
 - [Hvsna](https://play.google.com/store/apps/details?id=com.hvsna.app) — organize your day around prayers.
 - [Baim - Batch Imagery](https://egig.github.io/baim/) — desktop app to prompt-edit AI image in batch.
 - [Jane - Just Another Naming Engine](https://github.com/egig/jane) — generate names for you app or agents.
