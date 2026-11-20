@@ -3,6 +3,9 @@ public/
 resources/
 .hugo_build.lock
 
+# sideagent chat build deps (bundle is committed in static/js)
+chat/node_modules/
+
 .DS_Store
 .idea
 

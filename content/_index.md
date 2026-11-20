@@ -23,11 +23,11 @@ Open for hire, or as technical partner to build a product with.
 
 A few things I've built and worked on.
 
-- [Alur.sh](https://alur.sh) — workflow automation for service business.
 - [Sideagent](https://egig.github.io/sideagent/) — open-source AI assistant that answers from your product docs and cites its sources.
 - [Hvsna](https://play.google.com/store/apps/details?id=com.hvsna.app) — organize your day around prayers.
 - [Baim - Batch Imagery](https://egig.github.io/baim/) — desktop app to prompt-edit AI image in batch.
-- [Jane - Just Another Naming Engine](https://github.com/egig/jane) — generate names for you app or agents.
+- [Quran](https://egig.github.io/quran) - Quran translated per meaningfull phrase.
+
 
 [See more →](https://github.com/egig/)
 

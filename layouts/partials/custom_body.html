@@ -1,0 +1,4 @@
+{{- /* sideagent chat widget. Bundle built from /chat (npm run build). Enabled when params.sideagent.publishableKey is set. */ -}}
+{{- with site.Params.sideagent.publishableKey }}
+<script src="{{ "js/sideagent-chat.js" | relURL }}" data-publishable-key="{{ . }}" defer></script>
+{{- end }}

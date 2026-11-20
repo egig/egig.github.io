@@ -24,6 +24,10 @@ ignoreErrors = ["error-disable-taxonomy"]
   enablePostNavigator = true
   hideMadeWithLine = true
 
+[params.sideagent]
+  # Publishable key from sideagent Cloud (pk_live_…). Empty = chat disabled.
+  # publishableKey = "pk_c2lkZWFnZW50LnJlY3JhZnRvcnkuY29tJGFndF95NDY1anVwcmFhdG55OWo1"
+
 [caches.images]
   dir = ":cacheDir/images"
 
