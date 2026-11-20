@@ -579,3 +579,48 @@ html{scroll-behavior:smooth}
 .pg.clean .now .now-t{margin-top:12px !important;font-size:28px !important;line-height:1.15 !important;letter-spacing:-.025em !important;text-transform:none !important;color:#f5f5f7}
 .pg.clean .now .now-ul{font-size:15px !important;color:#a1a1a6 !important;gap:6px !important}
 .pg.clean .now .now-ul li > span{border-radius:50%;background:#0071e3 !important}
+
+/* ===== MOBILE LAYOUT (both views) ===== */
+/* clip decorative overhang (registration marks, hero glow) without breaking sticky */
+.pg{overflow-x:clip}
+/* offers stack below 880px: text first, then its figure, so each figure sits under its own copy */
+@media (max-width: 880px){
+.of > div{order:0 !important}
+/* section headers: stacked description loses its divider and the extra top gap */
+#offer > div + div,#work > .rg > div + div{border-left-width:0 !important;padding-top:0 !important}
+.of > .ill{border-left-width:0 !important;border-right-width:0 !important;border-top-width:1px !important;border-top-style:solid !important;border-top-color:#B7CCDB}
+}
+@media (max-width: 760px){
+.pg{padding-bottom:76px}
+.tgl{top:10px;right:10px;min-height:40px;padding:0 12px 0 6px}
+/* headline row: portrait and email CTA become full-width stacked rows */
+.hl > div:first-child{padding:28px 20px 32px !important}
+.hl > figure.pt{flex:1 1 100% !important;border-left-width:0 !important;border-top-width:1px !important;border-top-style:solid !important;border-top-color:#B7CCDB;padding:20px !important}
+.hl > .cta{flex:1 1 100% !important;flex-direction:row !important;align-items:center;border-left-width:0 !important;border-top-width:1px !important;border-top-style:solid !important;border-top-color:#B7CCDB;padding:28px 28px !important}
+/* facts: stacked cells separated by rules, tighter rhythm */
+.cell{padding:24px 20px !important;border-right-width:0 !important;border-bottom-width:1px !important;border-bottom-style:solid !important;border-bottom-color:#B7CCDB}
+.cell > span:nth-child(2){margin-top:12px !important;font-size:52px !important}
+.now{padding:28px 20px !important}
+.now .now-t{font-size:26px !important;margin-top:16px !important}
+/* side gutters */
+#offer > div,#work > .rg > div,.of > div:not(.ill){padding-left:20px !important;padding-right:20px !important}
+.of > div:not(.ill){padding-top:36px !important;padding-bottom:32px !important}
+.of h3{font-size:36px !important}
+.of > .ill{padding:32px 16px !important}
+.wc{min-height:0 !important;padding:24px 20px !important}
+/* experience timeline: four stops fit at phone width */
+.tl-b{padding:0 2px;gap:8px}
+.tl-b > span:nth-child(2){font-size:9px !important;letter-spacing:.04em !important}
+.tl-name{font-size:14px}
+[data-tl-sticky] > div:first-child,[data-tl-sticky] > div:nth-child(2){padding-left:20px !important;padding-right:20px !important}
+[data-tl-sticky] > div:nth-child(2) > div[aria-hidden]{left:calc(20px + (100% - 40px) * .125) !important}
+[data-tl-sticky] > div:nth-child(2) > div[aria-hidden]:not(.tl-fill){right:calc(20px + (100% - 40px) * .125) !important}
+[data-tl-sticky] .tl-fill{width:calc((100% - 40px) * .75 * var(--fill,0)) !important}
+.tl-p{padding:24px 20px !important}
+/* product view keeps its own spacing for the centred hero and tiles */
+.pg.clean .hl > div:first-child{padding:0 !important}
+.pg.clean .cell{padding:28px !important}
+.pg.clean .now{padding:28px !important}
+.pg.clean .of > .ill{padding:8px 16px 24px !important}
+.pg.clean .wc{padding:24px !important}
+}
