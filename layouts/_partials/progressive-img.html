@@ -1,0 +1,32 @@
+{{- /*
+  Responsive WebP image with a blurred inline placeholder (blur-up).
+  Params (dict):
+    src     path under assets/ (required)
+    alt     alt text
+    class   extra class names
+    style   inline style for the <img>
+    widths  slice of target widths in px (default 380, 760)
+    sizes   sizes attribute (default "380px")
+    eager   true for above-the-fold images
+*/ -}}
+{{- $img := resources.Get .src -}}
+{{- if not $img }}{{ errorf "progressive-img: asset %q not found" .src }}{{ end -}}
+{{- $widths := .widths | default (slice 380 760) -}}
+{{- $srcset := slice -}}
+{{- $fallback := "" -}}
+{{- range $widths -}}
+  {{- $w := cond (gt . $img.Width) $img.Width . -}}
+  {{- $r := $img.Resize (printf "%dx webp q78 picture" $w) -}}
+  {{- $srcset = $srcset | append (printf "%s %dw" $r.RelPermalink $r.Width) -}}
+  {{- $fallback = $r -}}
+{{- end -}}
+{{- $lqip := ($img.Resize "24x webp q40") | images.Filter (images.GaussianBlur 1.2) -}}
+<img src="{{ $fallback.RelPermalink }}"
+  srcset="{{ delimit $srcset ", " }}"
+  sizes="{{ .sizes | default "380px" }}"
+  width="{{ $fallback.Width }}" height="{{ $fallback.Height }}"
+  alt="{{ .alt }}"
+  {{- with .class }} class="{{ . }}"{{ end }}
+  {{- if .eager }} loading="eager" fetchpriority="high"{{ else }} loading="lazy"{{ end }}
+  decoding="async"
+  style="background: url(data:image/webp;base64,{{ $lqip.Content | base64Encode }}) center / cover no-repeat;{{ with .style }} {{ . | safeCSS }}{{ end }}">

@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "broken-image",
+        "value": "*",
+        "files": [
+          "layouts/_partials/progressive-img.html"
+        ],
+        "createdAt": "2026-11-20T11:05:05.746Z",
+        "reason": "Claude: src is a Hugo template expression; built output verified to emit real WebP URLs"
+      }
+    ]
+  }
+}
